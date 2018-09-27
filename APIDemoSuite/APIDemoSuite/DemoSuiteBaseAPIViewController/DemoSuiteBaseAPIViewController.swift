@@ -7,24 +7,29 @@
 //
 
 import UIKit
+import CTNetworkingSwift
 
-class DemoSuiteBaseAPIViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+open class DemoSuiteBaseAPIViewController: UIViewController {
+    public weak var paramSource : CTNetworkingBaseAPIManagerParamSource? = nil
+    weak var child : DemoSuiteBaseAPIViewControllerChild? = nil
+    var apiManager = CTNetworkingBaseAPIManager()
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    lazy var tableView : UITableView = {
+        let _tableView = UITableView(frame: .zero, style: .plain)
+        _tableView.delegate = self
+        _tableView.dataSource = self
+        _tableView.tableFooterView = UIView()
+        _tableView.register(DemoSuiteAPIManagerTableViewCell.self, forCellReuseIdentifier: DemoSuiteAPIManagerTableViewCell.identifier)
+        return _tableView
+    }()
+    
+    open var dataSource : [AnyObject] = []
+    public struct DataSourceKey {
+        public static let APIManagerTitle = "title"
+        public static let APIManagerClass = "class"
     }
-    */
+}
 
+protocol DemoSuiteBaseAPIViewControllerChild : CTNetworkingBaseAPIManagerParamSource {
+    var dataSource : [AnyObject] { get }
 }

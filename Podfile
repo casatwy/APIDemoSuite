@@ -6,5 +6,6 @@ target 'APIDemoSuite' do
   use_frameworks!
 
   pod "SwiftHandyFrame"
+  pod "CTNetworkingSwift", :path => '../CTNetworkingSwift'
 
 end

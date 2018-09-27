@@ -1,16 +1,31 @@
 PODS:
+  - Alamofire (4.7.3)
+  - CTMediator (25)
+  - CTNetworkingSwift (1):
+    - Alamofire
+    - CTMediator
   - SwiftHandyFrame (5)
 
 DEPENDENCIES:
+  - CTNetworkingSwift (from `../CTNetworkingSwift`)
   - SwiftHandyFrame
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CTMediator
     - SwiftHandyFrame
 
+EXTERNAL SOURCES:
+  CTNetworkingSwift:
+    :path: "../CTNetworkingSwift"
+
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
+  CTNetworkingSwift: 48bda51881ff81f2d491c55479cfeada6475a093
   SwiftHandyFrame: d2c11d3774d73a103cd6287c0933f97ab459d6ff
 
-PODFILE CHECKSUM: 860d52713989b7bf00e4d6459e79dbd5c29aafa5
+PODFILE CHECKSUM: 6cdd269eb5209fff3c76fec73e9e55a7a4d7fb92
 
 COCOAPODS: 1.6.0.beta.1

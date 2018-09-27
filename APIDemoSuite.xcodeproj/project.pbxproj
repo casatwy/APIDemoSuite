@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2CC0FF949AC519453277CC81 /* Pods_APIDemoSuite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6380297651CACE7BD5725C /* Pods_APIDemoSuite.framework */; };
+		4A22F1C5215CCEB2003F051D /* LifeCycle.DemoSuiteBaseAPIViewController.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22F1C4215CCEB2003F051D /* LifeCycle.DemoSuiteBaseAPIViewController.extension.swift */; };
+		4A22F1C7215CD026003F051D /* CallbackDelegate.DemoSuiteBaseAPIViewController.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A22F1C6215CD026003F051D /* CallbackDelegate.DemoSuiteBaseAPIViewController.extension.swift */; };
 		4AE822A8215CAA2A006AD3A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE822A7215CAA2A006AD3A2 /* AppDelegate.swift */; };
 		4AE822AA215CAA2A006AD3A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE822A9215CAA2A006AD3A2 /* ViewController.swift */; };
 		4AE822AD215CAA2A006AD3A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AE822AB215CAA2A006AD3A2 /* Main.storyboard */; };
@@ -20,10 +22,13 @@
 		4AE822C8215CAF7E006AD3A2 /* EventResponse.ResultView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE822C7215CAF7E006AD3A2 /* EventResponse.ResultView.extension.swift */; };
 		4AE822CA215CB0D2006AD3A2 /* LifeCycle.ResultView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE822C9215CB0D2006AD3A2 /* LifeCycle.ResultView.extension.swift */; };
 		4AE822CD215CC7E2006AD3A2 /* PublicMethods.ResultView.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE822CC215CC7E2006AD3A2 /* PublicMethods.ResultView.extension.swift */; };
+		4AE822CF215CCA0F006AD3A2 /* UITableView.BaseAPIViewController.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE822CE215CCA0F006AD3A2 /* UITableView.BaseAPIViewController.extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A8BEEDD04903C541560C4CA /* Pods-APIDemoSuite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIDemoSuite.debug.xcconfig"; path = "Target Support Files/Pods-APIDemoSuite/Pods-APIDemoSuite.debug.xcconfig"; sourceTree = "<group>"; };
+		4A22F1C4215CCEB2003F051D /* LifeCycle.DemoSuiteBaseAPIViewController.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycle.DemoSuiteBaseAPIViewController.extension.swift; sourceTree = "<group>"; };
+		4A22F1C6215CD026003F051D /* CallbackDelegate.DemoSuiteBaseAPIViewController.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackDelegate.DemoSuiteBaseAPIViewController.extension.swift; sourceTree = "<group>"; };
 		4AE822A4215CAA2A006AD3A2 /* APIDemoSuite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APIDemoSuite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE822A7215CAA2A006AD3A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AE822A9215CAA2A006AD3A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		4AE822C7215CAF7E006AD3A2 /* EventResponse.ResultView.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponse.ResultView.extension.swift; sourceTree = "<group>"; };
 		4AE822C9215CB0D2006AD3A2 /* LifeCycle.ResultView.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycle.ResultView.extension.swift; sourceTree = "<group>"; };
 		4AE822CC215CC7E2006AD3A2 /* PublicMethods.ResultView.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicMethods.ResultView.extension.swift; sourceTree = "<group>"; };
+		4AE822CE215CCA0F006AD3A2 /* UITableView.BaseAPIViewController.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.BaseAPIViewController.extension.swift; sourceTree = "<group>"; };
 		BB79DB2C208433E862887002 /* Pods-APIDemoSuite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APIDemoSuite.release.xcconfig"; path = "Target Support Files/Pods-APIDemoSuite/Pods-APIDemoSuite.release.xcconfig"; sourceTree = "<group>"; };
 		DE6380297651CACE7BD5725C /* Pods_APIDemoSuite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APIDemoSuite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +107,9 @@
 			children = (
 				4AE822C4215CACE8006AD3A2 /* Cell */,
 				4AE822BE215CACAC006AD3A2 /* DemoSuiteBaseAPIViewController.swift */,
+				4A22F1C4215CCEB2003F051D /* LifeCycle.DemoSuiteBaseAPIViewController.extension.swift */,
+				4AE822CE215CCA0F006AD3A2 /* UITableView.BaseAPIViewController.extension.swift */,
+				4A22F1C6215CD026003F051D /* CallbackDelegate.DemoSuiteBaseAPIViewController.extension.swift */,
 			);
 			path = DemoSuiteBaseAPIViewController;
 			sourceTree = "<group>";
@@ -249,12 +258,18 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-APIDemoSuite/Pods-APIDemoSuite-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
+				"${BUILT_PRODUCTS_DIR}/CTNetworkingSwift/CTNetworkingSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftHandyFrame/SwiftHandyFrame.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTNetworkingSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHandyFrame.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,14 +284,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE822CF215CCA0F006AD3A2 /* UITableView.BaseAPIViewController.extension.swift in Sources */,
 				4AE822C1215CACBA006AD3A2 /* DemoSuitePageAPIViewController.swift in Sources */,
 				4AE822AA215CAA2A006AD3A2 /* ViewController.swift in Sources */,
 				4AE822CA215CB0D2006AD3A2 /* LifeCycle.ResultView.extension.swift in Sources */,
+				4A22F1C5215CCEB2003F051D /* LifeCycle.DemoSuiteBaseAPIViewController.extension.swift in Sources */,
 				4AE822C8215CAF7E006AD3A2 /* EventResponse.ResultView.extension.swift in Sources */,
 				4AE822C6215CAD0A006AD3A2 /* DemoSuiteAPIManagerTableViewCell.swift in Sources */,
 				4AE822BF215CACAC006AD3A2 /* DemoSuiteBaseAPIViewController.swift in Sources */,
 				4AE822CD215CC7E2006AD3A2 /* PublicMethods.ResultView.extension.swift in Sources */,
 				4AE822C3215CACC8006AD3A2 /* DemoSuiteResultView.swift in Sources */,
+				4A22F1C7215CD026003F051D /* CallbackDelegate.DemoSuiteBaseAPIViewController.extension.swift in Sources */,
 				4AE822A8215CAA2A006AD3A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
