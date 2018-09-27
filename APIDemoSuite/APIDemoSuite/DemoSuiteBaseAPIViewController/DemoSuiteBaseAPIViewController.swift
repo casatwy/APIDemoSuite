@@ -11,7 +11,7 @@ import CTNetworkingSwift
 
 open class DemoSuiteBaseAPIViewController: UIViewController {
     public weak var paramSource : CTNetworkingBaseAPIManagerParamSource? = nil
-    weak var child : DemoSuiteBaseAPIViewControllerChild? = nil
+    public weak var child : DemoSuiteBaseAPIViewControllerChild? = nil
     var apiManager = CTNetworkingBaseAPIManager()
     
     lazy var tableView : UITableView = {
@@ -23,13 +23,12 @@ open class DemoSuiteBaseAPIViewController: UIViewController {
         return _tableView
     }()
     
-    open var dataSource : [AnyObject] = []
     public struct DataSourceKey {
         public static let APIManagerTitle = "title"
         public static let APIManagerClass = "class"
     }
 }
 
-protocol DemoSuiteBaseAPIViewControllerChild : CTNetworkingBaseAPIManagerParamSource {
-    var dataSource : [AnyObject] { get }
+public protocol DemoSuiteBaseAPIViewControllerChild : CTNetworkingBaseAPIManagerParamSource {
+    var dataSource : [[String:Any]] { get }
 }

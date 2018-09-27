@@ -15,10 +15,12 @@ extension DemoSuiteBaseAPIViewController : UITableViewDelegate, UITableViewDataS
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let dataSource = child?.dataSource else { return 0 }
         return dataSource.count
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let dataSource = child?.dataSource else { return }
         guard let Class = dataSource[indexPath.row][DemoSuiteBaseAPIViewController.DataSourceKey.APIManagerClass] as? NSObject.Type else { return }
         guard let instance = Class.init() as? CTNetworkingBaseAPIManager else { return }
         
@@ -42,6 +44,7 @@ extension DemoSuiteBaseAPIViewController : UITableViewDelegate, UITableViewDataS
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let dataSource = child?.dataSource else { return }
         guard let apiCell = cell as? DemoSuiteAPIManagerTableViewCell else { return }
         guard let title = dataSource[indexPath.row][DemoSuiteBaseAPIViewController.DataSourceKey.APIManagerTitle] as? String else { return }
         guard let clazz = dataSource[indexPath.row][DemoSuiteBaseAPIViewController.DataSourceKey.APIManagerClass] else { return }
