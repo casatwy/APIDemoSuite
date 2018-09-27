@@ -21,12 +21,14 @@ extension DemoSuiteBaseAPIViewController : UITableViewDelegate, UITableViewDataS
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let Class = dataSource[indexPath.row][DemoSuiteBaseAPIViewController.DataSourceKey.APIManagerClass] as? NSObject.Type else { return }
         guard let instance = Class.init() as? CTNetworkingBaseAPIManager else { return }
+        
         apiManager = instance
         apiManager.paramSource = child
         
         if apiManager.isPagable {
             let viewController = DemoSuitePageAPIViewController()
             viewController.apiManager = apiManager
+            apiManager.delegate = viewController
             navigationController?.pushViewController(viewController, animated: true)
         } else {
             apiManager.delegate = self
