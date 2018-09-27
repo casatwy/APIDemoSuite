@@ -16,6 +16,7 @@ class DemoSuiteResultView: UIView {
         _textView.text = ""
         _textView.isEditable = false
         _textView.layer.cornerRadius = 4
+        _textView.isUserInteractionEnabled = true
         return _textView
     }()
     

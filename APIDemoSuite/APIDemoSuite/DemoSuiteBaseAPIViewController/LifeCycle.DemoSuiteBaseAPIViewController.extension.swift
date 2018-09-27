@@ -11,7 +11,7 @@ import CTNetworkingSwift
 
 extension DemoSuiteBaseAPIViewController {
     convenience init() {
-        self.init()
+        self.init(nibName: nil, bundle: nil)
         guard let _self = self as? CTNetworkingBaseAPIManagerParamSource else {
             assert(false)
             return

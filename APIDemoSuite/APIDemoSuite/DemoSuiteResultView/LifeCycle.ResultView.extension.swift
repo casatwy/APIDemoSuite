@@ -10,7 +10,7 @@ import UIKit
 
 extension DemoSuiteResultView {
     convenience init() {
-        self.init()
+        self.init(frame:.zero)
         backgroundColor = UIColor.lightGray
         textView.addGestureRecognizer(tapGestureRecognizer)
         
