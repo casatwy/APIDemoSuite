@@ -11,10 +11,12 @@ import CTNetworkingSwift
 
 extension DemoSuiteBaseAPIViewController : CTNetworkingBaseAPIManagerCallbackDelegate {
     public func requestDidSuccess(_ apiManager: CTNetworkingBaseAPIManager) {
-        DemoSuiteResultView.config(content: apiManager.response.debugDescription + (apiManager.request?.debugDescription ?? ""), view: view)
+        guard let service = apiManager.child?.service else { return }
+        DemoSuiteResultView.config(content: apiManager.request?.logString(apiName: apiManager.child?.methodName() ?? "", service: service) ?? "", view: view)
     }
     
     public func requestDidFailed(_ apiManager: CTNetworkingBaseAPIManager) {
-        DemoSuiteResultView.config(content: apiManager.response.debugDescription + (apiManager.request?.debugDescription ?? ""), view: view)
+        guard let service = apiManager.child?.service else { return }
+        DemoSuiteResultView.config(content: apiManager.request?.logString(apiName: apiManager.child?.methodName() ?? "", service: service) ?? "", view: view)
     }
 }
