@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import CTNetworkingSwift
 
 extension DemoSuitePageAPIViewController {
     @objc func didTappedLoadFirstPageButton(_ button:UIButton) {
+        guard let apiManager = apiManager as? CTNetworkingAPIManagerPagable else { return }
+        statusLabel.text = "..."
+        apiManager.loadData()
+        DemoSuiteResultView.show(view: view)
     }
     
     @objc func didTappedLoadNextPageButton(_ button:UIButton) {
+        guard let apiManager = apiManager as? CTNetworkingAPIManagerPagable else { return }
+        if apiManager.isLastPage == false {
+            statusLabel.text = "loading"
+            apiManager.loadNextPage()
+            DemoSuiteResultView.show(view: view)
+        }
     }
 }

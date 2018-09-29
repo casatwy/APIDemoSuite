@@ -10,10 +10,16 @@ import CTNetworkingSwift
 
 extension DemoSuitePageAPIViewController : CTNetworkingBaseAPIManagerCallbackDelegate {
     func requestDidSuccess(_ apiManager: CTNetworkingBaseAPIManager) {
-        print("success")
+        guard let apiManager = apiManager as? CTNetworkingAPIManagerPagable else { return }
+        statusLabel.text = "\(apiManager.currentPageNumber + 1)/\(apiManager.totalCount ?? -1)"
+        let logString = apiManager.response?.logString()
+        DemoSuiteResultView.config(content: logString ?? "", view: view)
     }
     
     func requestDidFailed(_ apiManager: CTNetworkingBaseAPIManager) {
-        print("fail")
+        guard let apiManager = apiManager as? CTNetworkingAPIManagerPagable else { return }
+        statusLabel.text = "\(apiManager.currentPageNumber + 1)/\(apiManager.totalCount ?? -1)"
+        let logString = apiManager.response?.logString()
+        DemoSuiteResultView.config(content: logString ?? "", view: view)
     }
 }

@@ -14,7 +14,7 @@ class DemoSuiteResultView: UIView {
         _textView.textColor = UIColor.black
         _textView.font = UIFont.systemFont(ofSize: 12)
         _textView.text = ""
-        _textView.isEditable = true
+        _textView.isEditable = false
         _textView.layer.cornerRadius = 4
         _textView.isUserInteractionEnabled = true
         return _textView

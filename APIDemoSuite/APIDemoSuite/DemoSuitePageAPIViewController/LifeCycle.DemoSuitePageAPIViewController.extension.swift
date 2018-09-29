@@ -11,6 +11,7 @@ import Foundation
 extension DemoSuitePageAPIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.white
         view.addSubview(statusLabel)
         view.addSubview(loadFirstPageButton)
         view.addSubview(loadNextPageButton)
