@@ -12,10 +12,10 @@ extension DemoSuiteResultView {
     convenience init() {
         self.init(frame:.zero)
         backgroundColor = UIColor.lightGray
-        textView.addGestureRecognizer(tapGestureRecognizer)
-        
+
         addSubview(textView)
         addSubview(activityIndicatorView)
+        addSubview(closeButton)
     }
     
     override func layoutSubviews() {
@@ -31,5 +31,9 @@ extension DemoSuiteResultView {
         
         activityIndicatorView.ct_setCenterEqualToView(self)
         textView.ct_setCenterEqualToView(self)
+        
+        closeButton.ct_setSize(CGSize(width: 50, height: 50))
+        closeButton.ct_setInnerRightGap(30, shouldResize: false)
+        closeButton.ct_setInnerTopGap(30, shouldResize: false)
     }
 }

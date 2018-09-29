@@ -8,8 +8,8 @@
 
 import UIKit
 
-extension DemoSuiteResultView {
-    @objc func didRecognizedTapGesture(_ tapGesture:UITapGestureRecognizer) {
+extension DemoSuiteResultView : UITextViewDelegate {
+    @objc func didTappedCloseButton(_ button: UIButton) {
         UIView.animate(withDuration: 0.3, animations: {
             self.alpha = 0.0
         }) { isFinished in
