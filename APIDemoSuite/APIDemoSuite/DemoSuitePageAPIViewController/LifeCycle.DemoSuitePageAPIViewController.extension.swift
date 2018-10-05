@@ -6,7 +6,7 @@
 //  Copyright © 2018 casa. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension DemoSuitePageAPIViewController {
     override func viewDidLoad() {
