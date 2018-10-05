@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "APIDemoSuite"
-  s.version      = "2"
+  s.version      = "3"
   s.summary      = "APIDemoSuite."
   s.swift_version= "4.2"
 
